@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SEO-, Google- und Digital-Shelf-Potenzialanalyse für alpina-farben.de auf Basis von SISTRIX-Daten.">
+  <title>SEO Audit alpina-farben.de</title>
+  <style>
+    :root{--ink:#10233a;--navy:#19324d;--red:#d71920;--orange:#ef8d22;--green:#16825b;--muted:#64748b;--line:#dfe6ed;--bg:#f3f6f9;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;font-size:16px}
+    button,a{-webkit-tap-highlight-color:transparent}.rail{position:fixed;z-index:10;inset:0 auto 0 0;width:5px;background:linear-gradient(#d71920 0 32%,#ef8d22 32% 45%,#f4c531 45% 58%,#288d68 58% 70%,#19324d 70%)}
+    .top{position:sticky;z-index:9;top:0;display:flex;align-items:center;justify-content:space-between;padding:12px max(24px,calc((100vw - 1400px)/2));background:#fffffff2;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+    .brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none}.brandmark{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font-size:22px;font-weight:900}.brand b,.brand small{display:block}.brand b{letter-spacing:.14em}.brand small{margin-top:3px;color:#718195;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    .actions{display:flex;align-items:center;gap:18px}.status{color:#607285;font-size:12px}.status:before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:#1c9b6b;box-shadow:0 0 0 4px #1c9b6b18}
+    .print{padding:11px 17px;border:0;border-radius:999px;background:var(--navy);color:#fff;font-weight:700;cursor:pointer}.shell{width:min(1400px,calc(100% - 46px));margin:auto;padding:40px 0}
+    .hero{display:grid;grid-template-columns:1.45fr .75fr;gap:36px;align-items:end;padding:50px;border-radius:26px;background:linear-gradient(120deg,#0d2035,#19324d);color:#fff;box-shadow:0 20px 54px #10233a25}.tag{display:inline-flex;padding:7px 10px;border:1px solid #ffffff2b;border-radius:7px;background:#ffffff0c;color:#dbe5ee;font-size:11px;font-weight:800;letter-spacing:.1em}.hero h1{margin:22px 0 16px;font-size:clamp(40px,5vw,68px);line-height:.98;letter-spacing:-.055em}.hero h1 em{color:#ff6268;font-style:normal}.hero p{max-width:800px;margin:0;color:#c8d5df;line-height:1.7}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tags span{padding:7px 10px;border:1px solid #ffffff14;border-radius:7px;background:#ffffff0b;color:#dbe5ee;font-size:12px}
+    .score{display:flex;align-items:center;gap:22px;padding:24px;border:1px solid #ffffff1f;border-radius:18px;background:#ffffff0a}.ring{flex:0 0 126px;display:grid;place-items:center;aspect-ratio:1;border-radius:50%;background:conic-gradient(#ff555c 0 74%,#ffffff18 74%)}.ring:before{content:"74 / 100";display:grid;place-items:center;width:104px;aspect-ratio:1;border-radius:50%;background:#173049;font-size:25px;font-weight:800}.score h2{margin:5px 0 8px;font-size:20px}.score p{color:#a9bac8;font-size:12px;line-height:1.6}
+    .kpis{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:-16px 24px 28px}.kpi{padding:21px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 10px 28px #10233a12}.eyebrow{margin:0;color:#748496;font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.kpi strong{display:block;margin-top:11px;font-size:31px;letter-spacing:-.04em}.kpi p:last-child{margin:9px 0 0;color:var(--muted);font-size:13px;line-height:1.55}.down{color:#b4232b;font-size:11px;font-weight:800}
+    .tabs{position:sticky;z-index:8;top:72px;display:flex;gap:6px;overflow:auto;padding:8px;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#f3f6f9f5;backdrop-filter:blur(12px)}.tabs button{flex:0 0 auto;padding:9px 13px;border:0;border-radius:8px;background:transparent;color:#607285;font-weight:700;cursor:pointer}.tabs button.active{background:var(--navy);color:#fff}
+    .section{display:none;animation:fade .25s ease}.section.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}.heading{max-width:930px;margin:36px 0 22px}.heading h2{margin:5px 0 9px;font-size:clamp(29px,3vw,42px);line-height:1.08;letter-spacing:-.04em}.heading>p:last-child{margin:0;color:var(--muted);line-height:1.7}
+    .grid2{display:grid;grid-template-columns:1.25fr .85fr;gap:15px}.panel{padding:25px;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 7px 22px #1d32470a}.panel h3{margin:5px 0 0;font-size:20px}.panelhead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.badge{padding:5px 8px;border-radius:7px;background:#edf2f6;color:var(--navy);font-size:11px;font-weight:800}.source{margin:11px 0 0;color:#8998a7;font-size:11px;line-height:1.5}
+    .trendchart{width:100%;height:auto;margin-top:15px}.diag{display:grid;gap:9px;margin-top:17px}.diag div{display:grid;grid-template-columns:28px 1fr;gap:11px;padding:12px;border:1px solid #e7ecf1;border-radius:10px;background:#fbfcfd}.diag b:first-child{display:grid;place-items:center;width:25px;height:25px;border-radius:7px;background:var(--navy);color:#fff;font-size:11px}.diag p{margin:1px 0;color:var(--muted);font-size:13px;line-height:1.5}.diag strong{color:var(--ink)}
+    .findings{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.finding{padding:15px 0;border-top:1px solid #e7ecf1}.finding:first-of-type{border-top:0}.finding h4{margin:0 0 5px}.finding p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.positive{color:var(--green)}.development{color:#b76510}
+    .rankingbars{display:grid;gap:12px;margin-top:20px}.rankingbars div{display:grid;grid-template-columns:72px 1fr 46px;align-items:center;gap:10px;color:#607285;font-size:12px}.rankingbars i{height:9px;border-radius:999px;background:#cbd5e1}.rankingbars div:first-child i{background:var(--red)}.rankingbars div:nth-child(2) i{background:var(--orange)}
+    .filters{display:flex;flex-wrap:wrap;gap:6px;margin:19px 0 12px}.filters button{padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#607285;font-size:12px;font-weight:700;cursor:pointer}.filters button.active{border-color:var(--navy);background:var(--navy);color:#fff}
+    .tablewrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#fff}table{width:100%;border-collapse:collapse;text-align:left}th{padding:11px 14px;background:#f6f8fa;color:#718195;font-size:10px;letter-spacing:.08em;text-transform:uppercase}td{padding:12px 14px;border-top:1px solid #e9edf1;color:#5b6d80;font-size:13px}td:first-child{color:var(--ink);font-weight:700}td a{color:var(--navy)}.pos{padding:4px 7px;border-radius:6px;background:#fff4dc;color:#9a5b08;font-weight:800}.gain{color:var(--green);font-weight:800}
+    .bars{display:grid;gap:15px;margin-top:23px}.barrow{display:grid;grid-template-columns:190px 1fr 56px;gap:12px;align-items:center;color:#5e7184;font-size:13px}.track{height:18px;border-radius:6px;background:#edf1f5;overflow:hidden}.track i{display:block;height:100%;border-radius:6px;background:#9fb0c1}.barrow:first-child .track i{background:var(--red)}.compare{display:grid;gap:0;margin-top:17px}.compare div{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid #e6ebf0}.compare strong{color:var(--red);font-size:27px}.compare span{color:var(--muted);font-size:13px}
+    .evidence{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:17px;background:#fff}.evidence img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}.evidence figcaption{padding:17px 19px}.evidence figcaption b,.evidence figcaption span{display:block}.evidence figcaption span{margin-top:5px;color:var(--muted);font-size:12px;line-height:1.6}.dark{background:var(--navy);color:#fff}.dark h3{color:#fff}.dark .eyebrow{color:#a8bac8}.dark .diag div{border-color:#ffffff18;background:#ffffff08}.dark .diag p{color:#cad5de}.dark .diag strong{color:#fff}
+    .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:15px}.smallcard{padding:20px;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:14px;background:#fff}.smallcard h3{margin:4px 0 8px;font-size:17px}.smallcard p,.smallcard span{color:var(--muted);font-size:12px;line-height:1.6}.smallcard b{display:block;margin-top:14px;font-size:10px;letter-spacing:.09em;text-transform:uppercase}.smallcard span{display:block;margin-top:4px}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.flow div{padding:14px;border-radius:10px;background:#f2f5f8}.flow b{display:grid;place-items:center;width:23px;height:23px;margin-bottom:8px;border-radius:7px;background:var(--red);color:#fff;font-size:11px}.flow span{color:#718195;font-size:12px}
+    .issues{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.issue{padding:22px;border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:15px;background:#fff}.issue.primary{border-top-color:var(--red)}.issue h3{margin:11px 0 7px}.issue p,.issue span{color:var(--muted);font-size:13px;line-height:1.6}.issue b{display:block;margin-top:15px;font-size:10px;letter-spacing:.09em;text-transform:uppercase}.priority{display:inline-flex;padding:5px 8px;border-radius:6px;background:#fff2e4;color:#9d590e;font-size:10px;font-weight:800}.primary .priority{background:#fff0f0;color:#a9232b}
+    .roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.phase{padding:25px;border-radius:17px;color:#fff;background:var(--navy)}.phase:first-child{background:#b61920}.phase:nth-child(2){background:#c86c13}.phase h3{margin:7px 0 18px;font-size:25px}.phase ul{display:grid;gap:12px;margin:0;padding-left:18px}.phase li{color:#ffffffdc;font-size:13px;line-height:1.55}
+    footer{display:flex;justify-content:space-between;gap:20px;margin-top:42px;padding:22px 0;border-top:1px solid var(--line);color:#748496;font-size:11px}footer b{color:var(--navy)}
+    @media(max-width:1000px){.hero,.grid2{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.findings,.issues{grid-template-columns:1fr}.cards4{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:1fr}}
+    @media(max-width:650px){.shell{width:calc(100% - 28px);padding-top:20px}.top{padding:10px 18px}.status{display:none}.print{width:42px;font-size:0}.print:after{content:"PDF";font-size:11px}.hero{padding:28px 23px}.hero h1{font-size:40px}.score{align-items:flex-start;flex-direction:column}.ring{flex-basis:auto;width:110px}.ring:before{width:90px}.kpis{grid-template-columns:1fr;margin:13px 0 22px}.tabs{top:62px}.cards4,.flow{grid-template-columns:1fr}.barrow{grid-template-columns:130px 1fr 40px}.heading h2{font-size:30px}footer{flex-direction:column}}
+    @media print{@page{size:A4;margin:12mm}body{background:#fff;print-color-adjust:exact;-webkit-print-color-adjust:exact}.rail,.top,.tabs,.filters{display:none!important}.shell{width:100%;padding:0}.hero{padding:28px;border-radius:0;box-shadow:none}.hero h1{font-size:38px}.hero p{font-size:12px}.score{padding:15px}.ring{flex-basis:90px}.ring:before{width:74px;font-size:17px}.kpis{grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0}.kpi{padding:10px;box-shadow:none}.kpi strong{font-size:20px}.kpi p:last-child{font-size:8px}.section{display:block!important;break-before:page;animation:none}.heading{margin:0 0 13px}.heading h2{font-size:26px}.heading>p:last-child{font-size:10px}.panel{padding:14px;box-shadow:none;break-inside:avoid}.finding p,.issue p,.issue span,.smallcard p,.smallcard span{font-size:8px}.trendchart{max-height:180px}.cards4{gap:6px}.smallcard{padding:12px}.roadmap{gap:7px}.phase{padding:16px;break-inside:avoid}.phase li{font-size:8px}.tablewrap{overflow:visible}th,td{padding:6px;font-size:8px}footer{display:none}}
+  </style>
+</head>
+<body>
+  <div class="rail" aria-hidden="true"></div>
+  <header class="top">
+    <a class="brand" href="#top"><span class="brandmark">A</span><span><b>ALPINA</b><small>Organic Search Audit</small></span></a>
+    <div class="actions"><span class="status">SISTRIX · Deutschland</span><button class="print" onclick="window.print()">Als PDF speichern</button></div>
+  </header>
+
+  <main class="shell" id="top">
+    <section class="hero">
+      <div>
+        <span class="tag">SEO · GOOGLE · DIGITAL SHELF · 02.09.2026</span>
+        <h1>Starke Marke.<br><em>Gute Basis.</em><br>Gezieltes Wachstumspotenzial.</h1>
+        <p>alpina-farben.de besitzt ein belastbares organisches Fundament. Die nächste Entwicklungsstufe verbindet SEO-Signalqualität mit hochwertigem Product Content, strukturierter Verfügbarkeit und einer überzeugenden digitalen Kaufstrecke.</p>
+        <div class="tags"><span>✓ Hersteller-Benchmark vorn</span><span>✓ 31,4 % Ratgeber-Anteil</span><span>↗ Page-2-Potenziale</span><span>↗ Digital Shelf</span></div>
+      </div>
+      <aside class="score"><div class="ring"></div><div><p class="eyebrow">Strategischer Reifegrad</p><h2>Gute Substanz mit klaren Potenzialfeldern</h2><p>Agenturmodell aus Sichtbarkeit, Rankings, Content-Architektur, technischer Qualität und Digital Shelf. Kein offizieller SISTRIX-Wert.</p></div></aside>
+    </section>
+
+    <section class="kpis">
+      <article class="kpi"><p class="eyebrow">Sichtbarkeitsindex</p><strong>2,849</strong><span class="down">−9,8 % zum Vorjahr</span><p>+7,0 % gegenüber 2024 und +51,9 % gegenüber 2023.</p></article>
+      <article class="kpi"><p class="eyebrow">Ranking Keywords</p><strong>27.345</strong><p>Aktueller erweiterter Domain-Bestand im deutschen Index.</p></article>
+      <article class="kpi"><p class="eyebrow">Top-10 Keywords</p><strong>18.887</strong><span class="down">−8,4 % zum Vorjahr</span><p>Breite Erstseitenpräsenz mit zusätzlichem Potenzial.</p></article>
+      <article class="kpi"><p class="eyebrow">Traffic-Potenzial</p><strong>≈ 356 Tsd.</strong><p>SISTRIX-Schätzung; 31,4 % entfallen auf /artikel/.</p></article>
+    </section>
+
+    <nav class="tabs" aria-label="Berichtsbereiche">
+      <button class="active" data-tab="summary">Management Summary</button>
+      <button data-tab="rankings">Rankings &amp; Content</button>
+      <button data-tab="competition">Wettbewerb</button>
+      <button data-tab="shelf">Digital Shelf</button>
+      <button data-tab="technical">Technik &amp; Autorität</button>
+      <button data-tab="roadmap">Roadmap</button>
+    </nav>
+
+    <section class="section active" id="summary">
+      <div class="heading"><p class="eyebrow">01 · Management Summary</p><h2>Eine gute Ausgangslage mit gezielten Entwicklungsmöglichkeiten</h2><p>Alpina hält seine Sichtbarkeit auf einem guten Niveau. Zusätzliche Wirkung ist vor allem durch breitere Themenabdeckung, klar gebündelte Signale, die Aktivierung vorhandener Page-2-Potenziale und eine weiterentwickelte Online-Kaufstrecke möglich.</p></div>
+      <div class="grid2">
+        <article class="panel">
+          <div class="panelhead"><div><p class="eyebrow">24-Monats-Verlauf</p><h3>Sichtbarkeit bleibt robust</h3></div><span class="badge">SI 2,849</span></div>
+          <svg class="trendchart" viewBox="0 0 760 280" role="img" aria-label="Entwicklung des Sichtbarkeitsindex">
+            <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d71920" stop-opacity=".2"/><stop offset="1" stop-color="#d71920" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="#e7ecf1"><line x1="45" y1="35" x2="735" y2="35"/><line x1="45" y1="100" x2="735" y2="100"/><line x1="45" y1="165" x2="735" y2="165"/><line x1="45" y1="230" x2="735" y2="230"/></g>
+            <path d="M45 172 L100 124 L155 136 L210 72 L265 74 L320 94 L375 75 L430 72 L485 115 L540 112 L595 140 L650 98 L705 126 L705 230 L45 230 Z" fill="url(#fill)"/>
+            <polyline points="45,172 100,124 155,136 210,72 265,74 320,94 375,75 430,72 485,115 540,112 595,140 650,98 705,126" fill="none" stroke="#d71920" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#718195" font-size="12"><text x="38" y="258">Sep 24</text><text x="198" y="258">Mär 25</text><text x="365" y="258">Sep 25</text><text x="530" y="258">Mär 26</text><text x="680" y="258">Aug 26</text></g>
+          </svg>
+          <p class="source">Quelle: SISTRIX, Google Deutschland / Mobile, Datenstand 31.08.2026.</p>
+        </article>
+        <article class="panel"><div class="panelhead"><div><p class="eyebrow">Strategische Diagnose</p><h3>Was jetzt zählt</h3></div></div>
+          <div class="diag">
+            <div><b>1</b><p><strong>Stabile Domainbasis:</strong> Im direkten Herstellervergleich verfügt Alpina über eine sehr gute Ausgangsposition.</p></div>
+            <div><b>2</b><p><strong>Potenzial bei der Ranking-Breite:</strong> Longtail und Ranking-Set entwickeln sich zurückhaltender als die Sichtbarkeit.</p></div>
+            <div><b>3</b><p><strong>Potenzial bei der Signalbündelung:</strong> PDF-, URL- und interne Relevanzsignale können konsequenter zusammengeführt werden.</p></div>
+            <div><b>4</b><p><strong>Potenzial in der Kaufstrecke:</strong> Verfügbarkeit und Produktnutzen könnten entlang der Händlerstrecke noch hilfreicher vermittelt werden.</p></div>
+          </div>
+        </article>
+      </div>
+      <div class="findings">
+        <article class="panel"><p class="eyebrow positive">Stärken</p><h3>Worauf Alpina aufbauen kann</h3>
+          <div class="finding"><h4>Marken- und Themenautorität</h4><p>Alpina liegt im direkten Herstellervergleich vor Caparol, MissPompadour und Schöner Wohnen Farbe.</p></div>
+          <div class="finding"><h4>Starker Ratgeber-Flywheel</h4><p>Der /artikel/-Bereich steht für 31,4 % des geschätzten organischen Klickpotenzials.</p></div>
+          <div class="finding"><h4>Viele dominante Rankings</h4><p>Position 1 u. a. für „Wandfarben“, „Wandfarbe blau“, „Wandfarbe Küche“ und zentrale Brandbegriffe.</p></div>
+        </article>
+        <article class="panel"><p class="eyebrow development">Entwicklungsfelder</p><h3>Wo zusätzliche Wirkung möglich ist</h3>
+          <div class="finding"><h4>Ranking-Breite mit rückläufiger Tendenz</h4><p>Die Sichtbarkeit bleibt deutlich stabiler als die Keyword-Anzahl. Ein GSC-Abgleich sollte Longtail-Veränderungen und Datenbasisänderungen unterscheiden.</p></div>
+          <div class="finding"><h4>Top-10 leicht unter Vorjahr</h4><p>Die Kernrankings bleiben robust; bei der erweiterten Themenabdeckung besteht zusätzliches Potenzial.</p></div>
+          <div class="finding"><h4>URL- und Linksignale stärker bündeln</h4><p>Eine einheitliche Zielstruktur kann die vorhandene Autorität noch effizienter zusammenführen.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="rankings">
+      <div class="heading"><p class="eyebrow">02 · Rankings &amp; Content</p><h2>Bestehende Page-2-Potenziale gezielt aktivieren</h2><p>Keywords knapp außerhalb der ersten Ergebnisseite bieten mit der vorhandenen Domainautorität einen besonders effizienten Ausgangspunkt für zusätzliche organische Reichweite.</p></div>
+      <div class="grid2">
+        <article class="panel"><p class="eyebrow">Ranking-Verteilung</p><h3>32 % des betrachteten Sets auf Seite 1</h3><div class="rankingbars">
+          <div><span>Seite 1</span><i style="width:100%"></i><b>536</b></div><div><span>Seite 2</span><i style="width:46%"></i><b>245</b></div><div><span>Seite 3</span><i style="width:41%"></i><b>222</b></div><div><span>Seite 4</span><i style="width:30%"></i><b>159</b></div><div><span>Seite 5</span><i style="width:26%"></i><b>138</b></div>
+        </div><p class="source">SISTRIX Ranking Distribution, Datenstand 31.08.2026.</p></article>
+        <article class="panel"><p class="eyebrow">Traffic-Architektur</p><h3>Ratgeber ist der Wachstumsmotor</h3><div class="rankingbars">
+          <div><span>Domain /</span><i style="width:100%"></i><b>52,3%</b></div><div><span>/artikel/</span><i style="width:60%"></i><b>31,4%</b></div><div><span>/produkt/</span><i style="width:16%"></i><b>8,1%</b></div><div><span>/feine-farben/</span><i style="width:5%"></i><b>2,5%</b></div>
+        </div><p class="source">Jeder starke Artikel profitiert von einem klaren nächsten Schritt zu Produkt, Projektfinder, Farbraum-App oder Händler.</p></article>
+      </div>
+      <div class="filters" aria-label="Keyword-Chancen filtern"><button class="active" data-filter="all">Alle</button><button data-filter="quick">Quick Wins</button><button data-filter="content">Content</button><button data-filter="product">Produkt</button><button data-filter="cannibal">Kannibalisierung</button></div>
+      <div class="tablewrap"><table><thead><tr><th>Keyword</th><th>Position</th><th>Potenzial</th><th>Wettbewerb</th><th>Typ</th><th>URL</th></tr></thead><tbody>
+        <tr data-type="content"><td>weiß</td><td><span class="pos">#17</span></td><td class="gain">+100</td><td>66/100</td><td>Content</td><td><a href="https://alpina-farben.de/artikel/farbwirkung-weiss/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="content"><td>rot</td><td><span class="pos">#13</span></td><td class="gain">+45</td><td>67/100</td><td>Content</td><td><a href="https://alpina-farben.de/artikel/farbsymbolik-bedeutung-rot/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="content"><td>komplementärfarben</td><td><span class="pos">#14</span></td><td class="gain">+42</td><td>61/100</td><td>Content</td><td><a href="https://alpina-farben.de/artikel/farbenlehre/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="cannibal"><td>alpina feine farben</td><td><span class="pos">#11</span></td><td class="gain">+31</td><td>54/100</td><td>Kannibalisierung</td><td><a href="https://alpina-farben.de/fileadmin/assets/press/Feine_Farben_Lack_Broschuere.pdf" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="quick"><td>grundfarben</td><td><span class="pos">#11</span></td><td class="gain">+19</td><td>57/100</td><td>Quick Win</td><td><a href="https://alpina-farben.de/artikel/farbenlehre/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="quick"><td>flieder farbe</td><td><span class="pos">#11</span></td><td class="gain">+13</td><td>50/100</td><td>Quick Win</td><td><a href="https://alpina-farben.de/artikel/farbsymbolik-bedeutung-violett-lila/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="content"><td>schimmel entfernen wand</td><td><span class="pos">#14</span></td><td class="gain">+12</td><td>51/100</td><td>Content</td><td><a href="https://alpina-farben.de/artikel/schimmelflecken-entfernen/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="product"><td>altrosa</td><td><span class="pos">#18</span></td><td class="gain">+11</td><td>57/100</td><td>Produkt</td><td><a href="https://alpina-farben.de/produkt/alpina-pure-farben-altrosa/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="quick"><td>farbe beige</td><td><span class="pos">#12</span></td><td class="gain">+9</td><td>49/100</td><td>Quick Win</td><td><a href="https://alpina-farben.de/feine-farben/detail/beige-1/show/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="quick"><td>türen streichen</td><td><span class="pos">#11</span></td><td class="gain">+9</td><td>48/100</td><td>Quick Win</td><td><a href="https://alpina-farben.de/artikel/tuerrahmen-lackieren/" target="_blank">öffnen ↗</a></td></tr>
+        <tr data-type="quick"><td>farbe für badezimmer</td><td><span class="pos">#11</span></td><td class="gain">+9</td><td>36/100</td><td>Quick Win</td><td><a href="https://alpina-farben.de/artikel/badezimmer-als-wohlfuehloase/" target="_blank">öffnen ↗</a></td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="section" id="competition">
+      <div class="heading"><p class="eyebrow">03 · Wettbewerb</p><h2>Alpina führt die direkte Herstellergruppe</h2><p>Retailer wie OBI und Hornbach sind aufgrund ihrer Sortimentsbreite keine faire 1:1-Benchmark. Entscheidend ist die Position innerhalb der thematisch vergleichbaren Hersteller- und D2C-Gruppe.</p></div>
+      <div class="grid2">
+        <article class="panel"><p class="eyebrow">Sichtbarkeitsindex</p><h3>Direkter SEO-Marktvergleich</h3><div class="bars">
+          <div class="barrow"><span>alpina-farben.de</span><div class="track"><i style="width:100%"></i></div><b>2,849</b></div>
+          <div class="barrow"><span>caparol.de</span><div class="track"><i style="width:73%"></i></div><b>2,086</b></div>
+          <div class="barrow"><span>misspompadour.de</span><div class="track"><i style="width:71%"></i></div><b>2,018</b></div>
+          <div class="barrow"><span>schoener-wohnen-farbe.com</span><div class="track"><i style="width:52%"></i></div><b>1,485</b></div>
+        </div><p class="source">SISTRIX, Google Deutschland / Mobile, 31.08.2026.</p></article>
+        <article class="panel"><p class="eyebrow">Einordnung</p><h3>Führung gezielt absichern</h3><div class="compare"><div><strong>+36,6 %</strong><span>gegenüber Caparol</span></div><div><strong>+41,2 %</strong><span>gegenüber MissPompadour</span></div><div><strong>+91,8 %</strong><span>gegenüber Schöner Wohnen Farbe</span></div></div><p class="source">MissPompadour kann bei transaktionalen Suchintentionen durch D2C-Nähe ein relevanterer Wettbewerber sein, als der Gesamtindex allein vermuten lässt.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="shelf">
+      <div class="heading"><p class="eyebrow">04 · Structured Data &amp; Digital Shelf</p><h2>Hochwertige Produktdaten begleiten die Kaufentscheidung</h2><p>Besonders viel Potenzial liegt in der Verbindung der starken Markenbekanntheit mit einer nutzenorientierten, emotionaleren und kanalübergreifend konsistenten Kaufstrecke.</p></div>
+      <div class="grid2">
+        <figure class="evidence"><img src="assets/audit-shop-availability.png" alt="Alpina Produktdetailseite mit Hinweis auf aktuelle Nichtverfügbarkeit bei Online-Händlern"><figcaption><b>Praxisbeispiel: Verfügbarkeitsinformation mit Ausbaupotenzial</b><span>Die aktuelle Nichtverfügbarkeit wird transparent dargestellt. Alternativen, eine Benachrichtigung oder weitere Händleroptionen könnten die Nutzerführung sinnvoll fortsetzen.</span></figcaption></figure>
+        <article class="panel dark"><p class="eyebrow">Potenzial in der Weiterleitung</p><h3>Die vorhandene Nachfrage noch gezielter begleiten</h3><div class="diag">
+          <div><b>1</b><p><strong>Maschinenlesbare Produktdaten ergänzen:</strong> Product-/Offer-Markup kann Verfügbarkeit, Marke, GTIN und Händlerangebote bündeln.</p></div>
+          <div><b>2</b><p><strong>Nächste Schritte anbieten:</strong> Lokale Händler, Alternativprodukte oder Benachrichtigung geben Orientierung.</p></div>
+          <div><b>3</b><p><strong>Markenerlebnis fortführen:</strong> Eine ergänzte Händlerlogik führt die Customer Journey bis zum nächsten sinnvollen Schritt.</p></div>
+        </div></article>
+      </div>
+      <div class="cards4">
+        <article class="smallcard"><p class="eyebrow">Data</p><h3>Schema.org gezielt ergänzen</h3><p>Product + Offer/AggregateOffer, availability, GTIN, brand, image, SKU, color und ggf. review.</p><b>Wirkung</b><span>Verbesserte Maschinenlesbarkeit für Google, Merchant-Flächen und KI-Systeme.</span></article>
+        <article class="smallcard"><p class="eyebrow">Content</p><h3>Nutzenkommunikation stärken</h3><p>Technische Angaben um konkrete Vorteile ergänzen: weniger Arbeitsgänge, schneller fertig, weniger Spritzer, leichteres Ausbessern.</p><b>Wirkung</b><span>Die zentrale Kundenfrage wird beantwortet: Warum erleichtert dieses Produkt mein Projekt?</span></article>
+        <article class="smallcard"><p class="eyebrow">Image</p><h3>Bildstrecke erweitern</h3><p>Packshots durch Vorher/Nachher, Anwendung, Oberflächenwirkung, Raumkontext und relevante Details ergänzen.</p><b>Wirkung</b><span>Mehr Kaufklarheit und zusätzliche Sicherheit vor der Kaufentscheidung.</span></article>
+        <article class="smallcard"><p class="eyebrow">USP</p><h3>USP-Bilder testen</h3><p>Visuelle Proof-Points je SKU: Anwendung, Deckkraft, Reichweite, Werkzeug und Zeitersparnis.</p><b>Wirkung</b><span>Ein möglicher Conversion-Uplift sollte kanal- und SKU-spezifisch per A/B-Test belegt werden.</span></article>
+      </div>
+      <article class="panel" style="margin-top:15px"><p class="eyebrow">Hersteller-Perspektive</p><h3>Ein klares Operating Model hält die steigende Datenausgabe beherrschbar</h3><div class="flow"><div><b>1</b>Golden Record<br><span>Technik &amp; Stammdaten</span></div><div><b>2</b>Benefit Layer<br><span>Nutzen &amp; Proof</span></div><div><b>3</b>Channel Rules<br><span>Website · Händler · GMC</span></div><div><b>4</b>Quality Gate<br><span>Vollständigkeit &amp; Aktualität</span></div></div></article>
+    </section>
+
+    <section class="section" id="technical">
+      <div class="heading"><p class="eyebrow">05 · Technik &amp; Autorität</p><h2>Signale bündeln und vorhandene Linkkraft erhalten</h2><p>Die Domain verfügt über eine grundsätzlich tragfähige technische Basis. Zusätzlicher Nutzen entsteht durch konsequente Konsolidierung und einen klar geregelten Umgang mit historischen URLs, PDFs und indexierbaren Dateipfaden.</p></div>
+      <div class="issues">
+        <article class="issue primary"><span class="priority">Priorität 1</span><h3>URL-Konsolidierung</h3><p>Backlinkziele verteilen sich auf http/https, www/non-www, /home sowie Slash-/Non-Slash-Varianten.</p><b>Empfehlung</b><span>301-Matrix, Self-Canonicals, interne Links und XML-Sitemap auf eine URL-Norm vereinheitlichen.</span></article>
+        <article class="issue primary"><span class="priority">Priorität 1</span><h3>PDF-Steuerung</h3><p>Eine Broschüren-PDF erhält für „alpina feine farben“ Sichtbarkeit neben der primären Kollektion.</p><b>Empfehlung</b><span>HTML-Priorität durch interne Links, PDF-Metadaten und Download-Architektur stärken.</span></article>
+        <article class="issue"><span class="priority">Priorität 2</span><h3>Backlink-Hygiene</h3><p>Starke Zielvarianten bündeln zahlreiche Links auf historischen Hosts. Ein auffälliger Anchor verweist auf ein mögliches PBN-Muster.</p><b>Empfehlung</b><span>Redirect-Ziele prüfen und auffällige Muster beobachten.</span></article>
+        <article class="issue"><span class="priority">Priorität 2</span><h3>Indexierbare Dateibereiche</h3><p>/fileadmin/ erzeugt Reichweite. Einzelne PDFs und Assets könnten parallel zu HTML-Seiten sichtbar werden.</p><b>Empfehlung</b><span>Wertvolle Datenblätter erhalten und Überschneidungen gezielt prüfen.</span></article>
+      </div>
+      <article class="panel" style="margin-top:15px"><p class="eyebrow">Rahmen der Analyse</p><h3>Technische Detailprüfung als sinnvoller Folgeschritt</h3><p class="source">In der verbundenen SISTRIX-Umgebung ist aktuell kein Alpina Optimizer-Crawlprojekt vorhanden. Core Web Vitals, Statuscodes, Meta-Duplikate, interne Linktiefe, hreflang und Crawlhinweise sollten ergänzend verifiziert werden.</p></article>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="heading"><p class="eyebrow">06 · Priorisierte Roadmap</p><h2>90 Tage vom Befund zur messbaren Wirkung</h2><p>Erst Messung und Signalqualität, dann bestehende Rankings und Produktdaten aktivieren, anschließend neue Themenflächen und Händlerkanäle skalieren.</p></div>
+      <div class="roadmap">
+        <article class="phase"><p class="eyebrow" style="color:#ffffffb5">0–30 Tage</p><h3>Fundament sichern</h3><ul><li>GSC-Abgleich und Indexierungsveränderungen einordnen.</li><li>URL-, Redirect- und Canonical-Matrix erstellen.</li><li>Product-/Offer-Markup inklusive Verfügbarkeit konzipieren.</li><li>Stärkste Page-2-URLs und PDF-/HTML-Überschneidungen priorisieren.</li></ul></article>
+        <article class="phase"><p class="eyebrow" style="color:#ffffffb5">31–60 Tage</p><h3>Potenziale aktivieren</h3><ul><li>Golden Record plus Nutzenversprechen und Proof Points etablieren.</li><li>Ratgeber-to-Product-Pfade ausbauen.</li><li>Bildset für Hero-SKUs erweitern.</li><li>Wichtige Themencluster intern stärken.</li></ul></article>
+        <article class="phase"><p class="eyebrow" style="color:#ffffffb5">61–90 Tage</p><h3>Skalieren</h3><ul><li>Kanalspezifische Ausspielregeln etablieren.</li><li>A/B-Tests für Nutzen-Bullets, USP-Bilder und Händler-CTA.</li><li>Digital-PR mit verlinkbaren Assets ausbauen.</li><li>SEO-/Digital-Shelf-Board monatlich führen.</li></ul></article>
+      </div>
+    </section>
+
+    <footer><div><b>ALPINA Organic Search &amp; Digital Shelf Audit</b><br>SISTRIX-Daten, öffentliche Seitensignale und dokumentierte Praxisbeobachtungen.</div><div>Datenstand 31.08.2026 · Erstellt 02.09.2026</div></footer>
+  </main>
+
+  <script>
+    const tabs=[...document.querySelectorAll('.tabs button')];
+    const sections=[...document.querySelectorAll('.section')];
+    tabs.forEach(button=>button.addEventListener('click',()=>{
+      tabs.forEach(x=>x.classList.remove('active')); sections.forEach(x=>x.classList.remove('active'));
+      button.classList.add('active'); document.getElementById(button.dataset.tab).classList.add('active');
+      window.scrollTo({top:document.querySelector('.tabs').offsetTop-85,behavior:'smooth'});
+    }));
+    const filters=[...document.querySelectorAll('.filters button')];
+    const rows=[...document.querySelectorAll('tbody tr[data-type]')];
+    filters.forEach(button=>button.addEventListener('click',()=>{
+      filters.forEach(x=>x.classList.remove('active'));button.classList.add('active');
+      rows.forEach(row=>row.hidden=button.dataset.filter!=='all'&&row.dataset.type!==button.dataset.filter);
+    }));
+  </script>
+</body>
+</html>
